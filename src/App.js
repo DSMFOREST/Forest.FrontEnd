@@ -59,7 +59,13 @@ iteration = 0;
     animationRepeat: 0,
     texts: [
       {id : 1, text : "집에가고싶다"},
-      {id : 2, text : "새벽롤 파티원 구함 ㅋ"}
+      {id : 2, text : "새벽롤 파티원 구함 ㅋ"},
+      {id : 3, text : "나는 하늘을 나는 새"},
+      {id : 4, text : "고마워요~"},
+      {id : 5, text : "재밌는 롤 하실 사람 구합니다 선착순 5명 까지! aaaaaaaaaaaaaaaaaaaaa"},
+      {id : 6, text : "무요"},
+      {id : 7, text : "떴다 떴다 비행기 날아라 날아라"},
+      {id : 8, text : "자바스크립트 스터디 인원 모집합니다!"}
     ]
   }
 
@@ -67,7 +73,7 @@ iteration = 0;
     return (
       <div>
         <GlobalStyle />
-        <Main text = {this.state.texts}/>
+        <Main texts = {this.state.texts}/>
       </div>
     );
   }
