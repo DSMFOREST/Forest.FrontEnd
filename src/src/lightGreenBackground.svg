@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1366 764">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-lightGreenBackground);
+      }
+
+      .cls-2 {
+        fill: #95c550;
+      }
+
+      .cls-3 {
+        fill: #a0d15a;
+      }
+
+      .cls-4 {
+        fill: #afde6c;
+      }
+
+      .cls-5 {
+        fill: #e1f6c1;
+      }
+
+      .cls-6 {
+        filter: url(#사각형_8);
+      }
+
+      .cls-7 {
+        filter: url(#사각형_7);
+      }
+
+      .cls-8 {
+        filter: url(#사각형_2);
+      }
+    </style>
+    <filter id="사각형_2" x="538.358" y="-159.518" width="1060.205" height="1243.213" filterUnits="userSpaceOnUse">
+      <feOffset dx="-10" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="사각형_7" x="615.358" y="-162.518" width="1060.205" height="1243.213" filterUnits="userSpaceOnUse">
+      <feOffset dx="-10" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="사각형_8" x="702.358" y="-156.518" width="1060.205" height="1243.213" filterUnits="userSpaceOnUse">
+      <feOffset dx="-10" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-lightGreenBackground">
+      <rect width="1366" height="764"/>
+    </clipPath>
+  </defs>
+  <g id="lightGreenBackground" class="cls-1">
+    <rect class="cls-5" width="1366" height="764"/>
+    <g class="cls-8" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="사각형_2-2" data-name="사각형 2" class="cls-2" width="704" height="1037" transform="translate(945.83 -153.52) rotate(22)"/>
+    </g>
+    <g class="cls-7" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="사각형_7-2" data-name="사각형 7" class="cls-3" width="704" height="1037" transform="translate(1022.83 -156.52) rotate(22)"/>
+    </g>
+    <g class="cls-6" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="사각형_8-2" data-name="사각형 8" class="cls-4" width="704" height="1037" transform="translate(1109.83 -150.52) rotate(22)"/>
+    </g>
+  </g>
+</svg>
