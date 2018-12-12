@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
-import logo from '../src/logo.png'
-import TextList from '../components/TextList'
+import logo from '../../src/logo.png'
+import TextList from './TextList'
 
 const MainStyled = styled.div`
     width: 100%;
@@ -16,8 +16,9 @@ const HeaderStyled = styled.div`
     background-color: #88ba40;
     display: flex;
     align-items: center;
-
+    z-index: 1;
 `
+
 const Logo = styled.img.attrs({
     src : logo
 })`
@@ -33,6 +34,7 @@ const TextZone = styled.div`
     margin-left: auto;
     margin-right: auto;
 `
+
 
 class Main extends Component {
     render() {

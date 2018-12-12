@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled, { css, keyframes } from 'styled-components';
-import SignUpImage from '../src/cannabis_signUpbtn.png';
-import LoginImage from '../src/cannabis_loginbtn.png';
-import RightBackGround from '../src/greenBackOnly.png';
-import LeftBackGround from '../src/lightGreenBackOnly.png';
+import SignUpImage from '../../src/cannabis_signUpbtn.png';
+import LoginImage from '../../src/cannabis_loginbtn.png';
+import RightBackGround from '../../src/greenBackOnly.png';
+import LeftBackGround from '../../src/lightGreenBackOnly.png';
 
 const loginToSignupForSignup = keyframes`
     0% {
@@ -299,11 +299,18 @@ const Button = styled.h2`
     color: #ffffff;
 `
 
+const Wapper = styled.div`
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+`
+
 class Login extends Component {
 
     iteration = 0;
     converting = true;
     animation = false;
+
 
 componentDidMount = () => {
     const Right = document.getElementsByClassName('r19ht0')[0]
@@ -315,7 +322,7 @@ componentDidMount = () => {
 
     render() {
         return (
-            <React.Fragment>
+            <Wapper>
                 <LoginMain>
                 { !this.props.Animation && 
                     <LoginStyled login = {this.props.login}>
@@ -353,7 +360,7 @@ componentDidMount = () => {
                         <SignupCannabisButton onClick = {this.props.ToggleloginSection}/>
                     }
                 </LeftBackground>
-            </React.Fragment>
+            </Wapper>
         );
     }
 }

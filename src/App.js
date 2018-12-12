@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { createGlobalStyle } from 'styled-components'
-import Login from './components/Login'
-import Main from './components/Main'
+import Login from './components/Login/Login'
+import Main from './components/Main/Main'
+import { Route } from 'react-router-dom'
 
 const GlobalStyle = createGlobalStyle`
   body {
+    height: 100%;
     overflow: hidden;
+    overflow-y: scroll;
   }
 `
 
@@ -43,6 +46,7 @@ iteration = 0;
 
     if(this.iteration === 1)
     {
+        console.log('실행')
         this.setState({
           animation : true
         })
@@ -65,7 +69,7 @@ iteration = 0;
       {id : 5, text : "재밌는 롤 하실 사람 구합니다 선착순 5명 까지! aaaaaaaaaaaaaaaaaaaaa"},
       {id : 6, text : "무요"},
       {id : 7, text : "떴다 떴다 비행기 날아라 날아라"},
-      {id : 8, text : "자바스크립트 스터디 인원 모집합니다!"}
+      {id : 8, text : "자바스크립트입니다!"}
     ]
   }
 
@@ -73,7 +77,15 @@ iteration = 0;
     return (
       <div>
         <GlobalStyle />
-        <Main texts = {this.state.texts}/>
+        <Route exact path = "/" render = {props => <Main texts = {this.state.texts}/>}/>
+        <Route exact path = "/login" render = {props => 
+        <Login HandleAnimationEnd = {this.HandleAnimationEnd}
+        HandleAnimationIteration = {this.HandleAnimationIteration}
+        animationRepeat = {this.state.animationRepeat}
+        login = {this.state.loginSection}
+        ToggleloginSection = {this.ToggleLoginSection}
+        Animation = {this.state.animation}
+        />}/>
       </div>
     );
   }

@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
-import textImage from '../src/cannabis.png'
+import textImage from '../../src/cannabis.png'
 
 const TextItemStyled = styled.div`
-    margin-top: 10px;
     width: 784px;
     background-color: #ffffff;
     padding-top: 14px;
     padding-left: 19px;
     padding-bottom: 19px;
-
+    margin-top: 10px;
     margin-bottom: 10px;
 
     & + & {
@@ -53,7 +52,7 @@ class TextItem extends Component {
                 <TextTitle>
                     <TextImage/>
                     <Text>    
-                       {this.props.id}번 째 대마
+                       {this.props.id}번째 대마
                    </Text>
                 </TextTitle>
                 <Texts>
