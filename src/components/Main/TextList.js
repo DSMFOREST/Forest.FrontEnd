@@ -7,7 +7,7 @@ class TextList extends Component {
         const RenderList = texts.map(
             text => (
                 <TestItem
-                    id = {text.id}
+                    key = {text.id}
                     text = {text.text}
                 />
             )

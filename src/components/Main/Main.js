@@ -128,7 +128,9 @@ class Main extends Component {
                     </Link>
                     <BugReportButton plus = {this.props.plusButton}/>
                     {this.props.admin && 
-                    <AdminButton plus = {this.props.plusButton}/>
+                    <Link to = "/admin">
+                        <AdminButton plus = {this.props.plusButton}/>
+                    </Link>
                     }
                     <TextList texts = {this.props.texts}/>
                 </TextZone>
