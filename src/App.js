@@ -84,6 +84,7 @@ iteration = 0;
     plusButton: false,
     modal: false,
     login: false,
+    admin: false,
     texts: [
       {id : 1, text : "집에가고싶다"},
       {id : 2, text : "새벽롤 파티원 구함 ㅋ"},
@@ -112,7 +113,7 @@ iteration = 0;
     return (
       <div>
         <GlobalStyle />
-        <Route exact path = "/" render = {props => <Main ToggleLoginState = {this.ToggleLoginState} login = {this.state.login} TogglePlusState = {this.TogglePlusState} texts = {this.state.texts} plusButton = {this.state.plusButton}/>}/>
+        <Route exact path = "/" render = {props => <Main admin = {this.state.admin} ToggleLoginState = {this.ToggleLoginState} login = {this.state.login} TogglePlusState = {this.TogglePlusState} texts = {this.state.texts} plusButton = {this.state.plusButton}/>}/>
         <Route exact path = "/login" render = {props => 
         <Login HandleAnimationEnd = {this.HandleAnimationEnd}
         HandleAnimationIteration = {this.HandleAnimationIteration}

@@ -5,6 +5,7 @@ import TextList from './TextList'
 import plusButton from '../../src/plus_green.png'
 import bugReportButton from '../../src/bugReportbtn.png'
 import writingButton from '../../src/writingbtn.png'
+import adminButton from '../../src/adminbtn.png'
 import { Link } from 'react-router-dom'
 
 const MainStyled = styled.div`
@@ -78,6 +79,19 @@ const BugReportButton = styled.div`
     transition: bottom .3s linear;
 `
 
+const AdminButton = styled.div`
+    position: fixed;
+    bottom: 50px;
+    right: 301px;
+    width: 83px;
+    height: 83px;
+    background-image: url(${adminButton});
+    background-size: cover;
+    background-repeat: no-repeat;
+    ${props => props.plus && `bottom: 359px;`}
+    transition: bottom .3s linear;
+`
+
 const LoginButton = styled.span`
     position: absolute;
     right: 13px;
@@ -113,6 +127,9 @@ class Main extends Component {
                         <WriteButton plus = {this.props.plusButton}/>
                     </Link>
                     <BugReportButton plus = {this.props.plusButton}/>
+                    {this.props.admin && 
+                    <AdminButton plus = {this.props.plusButton}/>
+                    }
                     <TextList texts = {this.props.texts}/>
                 </TextZone>
             </MainStyled>
