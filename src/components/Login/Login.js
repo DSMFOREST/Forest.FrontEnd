@@ -4,6 +4,7 @@ import SignUpImage from '../../src/cannabis_signUpbtn.png';
 import LoginImage from '../../src/cannabis_loginbtn.png';
 import RightBackGround from '../../src/greenBackOnly.png';
 import LeftBackGround from '../../src/lightGreenBackOnly.png';
+import { withRouter } from 'react-router-dom'
 
 const loginToSignupForSignup = keyframes`
     0% {
@@ -320,6 +321,13 @@ componentDidMount = () => {
     Left.style.zIndex = 2;
 }
 
+
+LoginFunction = () => {
+    alert('로그인이 완료되었습니다!')
+    this.props.ToggleLoginState()
+    this.props.history.push('/')
+}
+
     render() {
         return (
             <Wapper>
@@ -342,8 +350,8 @@ componentDidMount = () => {
                                 <Input placeholder = "ID" login = {this.props.login} loginID = {this.props.login}/>
                                 <InputPW placeholder = "PW" loginPW = {this.props.login}/>
                             <ButtonStyled login = {this.props.login}>                    
-                                {!this.props.login && <Button>SignUP</Button>}                
-                                {this.props.login && <Button>Login</Button>}
+                                {!this.props.login && <Button onClick = {()=> alert('회원가입이 완료되었습니다!')}>SignUP</Button>}                
+                                {this.props.login && <Button onClick = {this.LoginFunction}>Login</Button>}
                             </ButtonStyled>
                         </InputStyled>
                     </LoginStyled>
@@ -365,4 +373,4 @@ componentDidMount = () => {
     }
 }
 
-export default Login;
+export default withRouter(Login);
